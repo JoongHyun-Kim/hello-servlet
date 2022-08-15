@@ -30,7 +30,7 @@ public class FrontControllerServletV2 extends HttpServlet {
 
         String requestURI = request.getRequestURI(); //request에서 URI를 가져와 requestURI에 저장
 
-        ControllerV2 controller = controllerMap.get(requestURI); //controllerV1 인터페이스를 이용해 각 URI에 매핑되는 controller를 찾을 수 있다.
+        ControllerV2 controller = controllerMap.get(requestURI); //controllerV2 인터페이스를 이용해 각 URI에 매핑되는 controller를 찾을 수 있다.
         if (controller == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
